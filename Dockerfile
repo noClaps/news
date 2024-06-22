@@ -1,7 +1,7 @@
 FROM oven/bun
 
 COPY package.json bun.lockb ./
-RUN --mount=type=cache,id=s/e47e0c85-96cd-4c55-ab56-79e946229e7c-/root/bun,target=/root/.bun bun install -p
+RUN --mount=type=cache,id=s/ad716af1-7981-4f80-8b57-4270d084d848-/root/bun,target=/root/.bun bun install -p
 
 COPY . ./
 
