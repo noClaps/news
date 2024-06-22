@@ -70,6 +70,6 @@ const app = new Elysia()
 
     return `<a href="${post.url}" target="_blank" hx-get="/posts?page=${index + 1}" hx-target="main" hx-trigger="${!(index % 25) ? "revealed" : "load once"}" hx-swap="beforeend">${post.title} <span class="dim">(${new URL(post.url).hostname})</span> </a><hr>`;
   })
-  .listen(8080);
+  .listen(Bun.env.PORT || 8080);
 
 console.log(`Listening on ${app.server?.url}`);
