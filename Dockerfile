@@ -6,3 +6,4 @@ RUN --mount=type=cache,id=s/ad716af1-7981-4f80-8b57-4270d084d848-/root/bun,targe
 COPY . ./
 
 CMD [ "bun", "start" ]
+EXPOSE 8080
