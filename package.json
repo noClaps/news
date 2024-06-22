@@ -1,0 +1,15 @@
+{
+  "name": "news",
+  "type": "module",
+  "scripts": {
+    "start": "bun run main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.5",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "elysia": "^1.0.25",
+    "htmx.org": "^1.9.12"
+  }
+}
