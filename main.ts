@@ -13,7 +13,7 @@ type Story = {
 
 class Stories {
   #storyIds: number[] = [];
-  #index: number = 0;
+  #index = 0;
   #blocklist: string[] = []; // hostnames
 
   async getStoryIds() {
@@ -65,7 +65,7 @@ const app = new Elysia()
     ).outputs[0]?.text();
   })
   .get("/posts", async ({ query }) => {
-    let page = +(query.page ?? 0);
+    const page = +(query.page ?? 0);
     const [index, post] = await stories.getPost(page);
 
     return `<a href="${post.url}" target="_blank" hx-get="/posts?page=${index + 1}" hx-target="main" hx-trigger="${!(index % 25) ? "revealed" : "load once"}" hx-swap="beforeend">${post.title} <span class="dim">(${new URL(post.url).hostname})</span> </a><hr>`;
