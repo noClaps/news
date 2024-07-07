@@ -1,4 +1,5 @@
-import { Elysia } from "elysia";
+import Elysia from "elysia";
+import staticPlugin from "@elysiajs/static";
 
 type Story = {
   id: number;
@@ -53,6 +54,7 @@ class Stories {
 const stories = new Stories();
 
 const app = new Elysia()
+  .use(staticPlugin())
   .get("/", async () => {
     await stories.getStoryIds();
     return Bun.file("src/index.html");
