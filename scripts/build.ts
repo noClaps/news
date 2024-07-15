@@ -6,5 +6,5 @@ Bun.write(
   await Bun.build({
     entrypoints: ["src/script.ts"],
     minify: true,
-  }).then((bo) => bo.outputs[0].toString()),
+  }).then((bo) => bo.outputs[0].text()),
 );
