@@ -2,16 +2,26 @@
 
 A minimal Hacker News client.
 
-# Build instructions
+## Build instructions
 
 1. Clone the repository.
+
    ```sh
    git clone https://github.com/noClaps/news.git
    cd news/
    ```
 
-2. Install dependencies and start the server.
+2. Install dependencies and start the development server.
+
    ```sh
    bun install
-   bun start
+   bun dev
    ```
+
+3. Build the site.
+
+   ```sh
+   bun run build
+   ```
+
+   This will place the built files in `dist/`.
