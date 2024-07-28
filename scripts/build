@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p dist/
+cp src/favicon.png src/index.html src/style.css dist/
+bun build src/script.ts --minify --outdir dist/
