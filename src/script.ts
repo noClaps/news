@@ -7,7 +7,7 @@ type Story = {
 const mainElement = document.querySelector("main");
 if (!mainElement) throw new Error("Main element not found");
 
-const blocklist: string[] = ["news.ycombinator.com"];
+const blocklist: string[] = ["news.ycombinator.com", "twitter.com"];
 
 const storyIds: number[] = await fetch(
   "https://hacker-news.firebaseio.com/v0/newstories.json",
