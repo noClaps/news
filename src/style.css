@@ -1,82 +1,82 @@
 @import url("https://rsms.me/inter/inter.css");
 
 :root {
-    color-scheme: dark;
+	color-scheme: dark;
 
-    --font: InterVariable, Inter, system-ui, -apple-system, BlinkMacSystemFont;
-    --font-features: "liga" 1, "calt" 1, "case" 1, "ss04" 1, "cv10" 1;
-    --accent: oklch(69.579% 0.20426 43.491);
-    --bg: oklch(23.503% 0 none);
-    --grey: oklch(59.987% 0 none);
-    --text: oklch(100% 0 none);
+	--font: InterVariable, Inter, system-ui, -apple-system, BlinkMacSystemFont;
+	--font-features: "liga" 1, "calt" 1, "case" 1, "ss04" 1, "cv10" 1;
+	--accent: oklch(69.579% 0.20426 43.491);
+	--bg: oklch(23.503% 0 none);
+	--grey: oklch(59.987% 0 none);
+	--text: oklch(100% 0 none);
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    font-feature-settings: var(--font-features);
-    width: 88dvw;
-    max-width: 48rem;
-    margin: auto;
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: var(--font);
+	font-feature-settings: var(--font-features);
+	width: 88dvw;
+	max-width: 48rem;
+	margin: auto;
 }
 
 header {
-    text-align: center;
+	text-align: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 a {
-    @starting-style {
-        opacity: 0;
-        visibility: hidden;
-    }
+	@starting-style {
+		opacity: 0;
+		visibility: hidden;
+	}
 
-    color: var(--text);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    opacity: 1;
-    visibility: visible;
-    transition:
-        opacity 1s,
-        visibility 1s,
-        color 0.25s;
+	color: var(--text);
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	opacity: 1;
+	visibility: visible;
+	transition:
+		opacity 1s,
+		visibility 1s,
+		color 0.25s;
 
-    &:hover {
-        color: var(--accent);
-    }
+	&:hover {
+		color: var(--accent);
+	}
 
-    @media screen and (width < 800px) {
-        flex-direction: column;
-        align-items: start;
-    }
+	@media screen and (width < 800px) {
+		flex-direction: column;
+		align-items: start;
+	}
 }
 
 .dim {
-    color: var(--grey);
-    font-size: 0.8rem;
+	color: var(--grey);
+	font-size: 0.8rem;
 }
 
 hr {
-    @starting-style {
-        opacity: 0;
-        visibility: hidden;
-    }
+	@starting-style {
+		opacity: 0;
+		visibility: hidden;
+	}
 
-    opacity: 1;
-    visibility: visible;
-    transition: all 1s;
-    background-color: var(--grey);
-    width: 100%;
-    border: none;
-    border-radius: 1rem;
-    height: 0.1rem;
-    margin: 0;
+	opacity: 1;
+	visibility: visible;
+	transition: all 1s;
+	background-color: var(--grey);
+	width: 100%;
+	border: none;
+	border-radius: 1rem;
+	height: 0.1rem;
+	margin: 0;
 }
