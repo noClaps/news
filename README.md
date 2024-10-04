@@ -11,17 +11,8 @@ A minimal Hacker News client.
    cd news/
    ```
 
-2. Install dependencies and start the development server.
+2. Start the development server.
 
    ```sh
-   bun install
-   bun dev
+   bunx serve src
    ```
-
-3. Build the site.
-
-   ```sh
-   bun run build
-   ```
-
-   This will place the built files in `dist/`.
