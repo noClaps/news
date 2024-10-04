@@ -9,7 +9,6 @@
 const mainElement = document.querySelector("main");
 if (!mainElement) throw new Error("Main element not found");
 
-/** @type {string[]} */
 const blocklist = ["news.ycombinator.com", "twitter.com", "www.wsj.com"];
 
 /** @type {number[]} */
