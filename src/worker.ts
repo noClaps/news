@@ -1,18 +1,14 @@
-/**
- * @typedef {{
- * 	type: "story";
- * 	url: string;
- * 	title: string;
- * }} Story
- */
+interface Story {
+  type: "story";
+  url: string;
+  title: string;
+}
 
 const blocklist = ["news.ycombinator.com", "twitter.com", "www.wsj.com"];
 
 addEventListener("message", async ({ data }) => {
   const storyId = data;
-
-  /** @type {Story} */
-  let story = await fetch(
+  const story: Story = await fetch(
     `https://hacker-news.firebaseio.com/v0/item/${storyId}.json`,
   )
     .then((r) => r.json())

@@ -1,7 +1,24 @@
+@font-face {
+    font-family: InterVariable;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("https://rsms.me/inter/font-files/InterVariable.woff2?v=4.0")
+        format("woff2");
+}
+@font-face {
+    font-family: InterVariable;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("https://rsms.me/inter/font-files/InterVariable-Italic.woff2?v=4.0")
+        format("woff2");
+}
+
 :root {
     color-scheme: dark;
 
-    --font: InterVariable, Inter, system-ui, -apple-system, BlinkMacSystemFont;
+    --font: InterVariable, system-ui;
     --font-features: "liga" 1, "calt" 1, "case" 1, "ss04" 1, "cv10" 1;
     --accent: oklch(69.579% 0.20426 43.491);
     --bg: oklch(23.503% 0 none);

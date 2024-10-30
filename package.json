@@ -1,0 +1,13 @@
+{
+  "name": "news",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "dev": "bun run scripts/dev.ts"
+  },
+  "module": "index.ts"
+}
