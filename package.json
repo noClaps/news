@@ -6,7 +6,7 @@
     "typescript": "^5.7.3"
   },
   "scripts": {
-    "build": "bun run scripts/build.ts",
+    "build": "bun build src/index.html --outdir dist",
     "dev": "bun run scripts/dev.ts"
   },
   "module": "index.ts"
