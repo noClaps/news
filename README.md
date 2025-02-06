@@ -4,6 +4,8 @@ A minimal Hacker News client.
 
 ## Build instructions
 
+You will need [Bun](https://bun.sh) to build and run this site.
+
 1. Clone the repository.
 
    ```sh
@@ -14,5 +16,15 @@ A minimal Hacker News client.
 2. Start the development server.
 
    ```sh
-   bunx serve src
+   bun dev
    ```
+
+   This will start a dev server at `http://localhost:3000`.
+
+3. Build the site.
+
+   ```sh
+   bun run build
+   ```
+
+   This will build the site and place the output into the `dist/` directory.
