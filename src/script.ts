@@ -3,7 +3,7 @@ const BLOCKLIST = [
   "twitter.com",
   "www.wsj.com",
   "www.bloomberg.com",
-  "www.ft.com"
+  "www.ft.com",
 ];
 
 interface Story {

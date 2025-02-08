@@ -4,8 +4,8 @@
     "": {
       "name": "news",
       "devDependencies": {
-        "@types/bun": "^1.1.14",
-        "typescript": "^5.7.2",
+        "@types/bun": "^1.2.2",
+        "typescript": "^5.7.3",
       },
     },
   },
