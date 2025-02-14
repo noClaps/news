@@ -12,6 +12,15 @@ interface Story {
   title: string;
 }
 
+function escapeHTML(input: string) {
+  return input
+    .replaceAll(`&`, `&amp;`)
+    .replaceAll(`"`, `&quot;`)
+    .replaceAll(`'`, `&#x27;`)
+    .replaceAll(`<`, `&lt;`)
+    .replaceAll(`>`, `&gt;`);
+}
+
 const storyIds: number[] = await fetch(
   "https://hacker-news.firebaseio.com/v0/newstories.json",
 )
@@ -40,6 +49,6 @@ for (const storyId of storyIds) {
 
   mainElement.insertAdjacentHTML(
     "beforeend",
-    `<a href="${story.url}" target="_blank">${story.title} <span class="dim">(${new URL(story.url).hostname})</span></a><hr>`,
+    `<a href="${story.url}" target="_blank">${escapeHTML(story.title)} <span class="dim">(${new URL(story.url).hostname})</span></a><hr>`,
   );
 }
