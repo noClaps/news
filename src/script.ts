@@ -4,6 +4,7 @@ const BLOCKLIST = [
   "www.wsj.com",
   "www.bloomberg.com",
   "www.ft.com",
+  "www.nytimes.com",
 ];
 
 interface Story {
