@@ -1,7 +1,7 @@
 {
   "name": "news",
   "scripts": {
-    "build": "bunx vite build src --outDir ../dist --emptyOutDir",
+    "build": "bunx vite build src --outDir ../dist --emptyOutDir --target esnext",
     "dev": "bunx vite src"
   },
   "type": "module"
