@@ -53,3 +53,5 @@ for (const storyId of storyIds) {
     `<a href="${story.url}" target="_blank">${escapeHTML(story.title)} <span class="dim">(${new URL(story.url).hostname})</span></a><hr>`,
   );
 }
+
+export {};

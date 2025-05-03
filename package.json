@@ -1,13 +1,8 @@
 {
   "name": "news",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "^1.2.5",
-    "typescript": "^5.8.2"
-  },
   "scripts": {
-    "build": "bun build src/index.html --outdir dist",
-    "dev": "bun run scripts/dev.ts"
+    "build": "bunx vite build src --outDir ../dist --emptyOutDir",
+    "dev": "bunx vite src"
   },
-  "module": "index.ts"
+  "type": "module"
 }

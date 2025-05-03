@@ -19,8 +19,6 @@ You will need [Bun](https://bun.sh) to build and run this site.
    bun dev
    ```
 
-   This will start a dev server at `http://localhost:3000`.
-
 3. Build the site.
 
    ```sh
