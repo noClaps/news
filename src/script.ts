@@ -6,6 +6,7 @@ const BLOCKLIST = [
   "www.ft.com",
   "www.nytimes.com",
   "x.com",
+  "www.whio.com",
 ];
 
 interface Story {
