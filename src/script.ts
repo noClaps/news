@@ -33,15 +33,13 @@ const storyIds: number[] = await fetch(
   });
 
 const mainElement = document.querySelector("main")!;
-for (const storyId of storyIds) {
-  const story: Story = await fetch(
-    `https://hacker-news.firebaseio.com/v0/item/${storyId}.json`,
-  )
-    .then((r) => r.json())
-    .catch((err) => {
-      throw new Error(err);
-    });
+const stories: Story[] = await Promise.all(
+  storyIds.map((storyId) =>
+    fetch(`https://hacker-news.firebaseio.com/v0/item/${storyId}.json`),
+  ),
+).then((stories) => Promise.all(stories.map((story) => story.json())));
 
+for (const story of stories) {
   if (
     story.type !== "story" ||
     !story.url ||
