@@ -1,34 +1,18 @@
-@font-face {
-    font-family: Calibre;
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./Calibre-Regular.otf");
-}
-
 :root {
     color-scheme: light dark;
 
-    --font: Calibre, system-ui;
-    --accent: oklch(69.579% 0.20426 43.491);
-    --grey: oklch(59.987% 0 none);
+    --font: system-ui;
+    --accent: #ff732e;
 
-    @media (prefers-color-scheme: dark) {
-        --bg: oklch(23.503% 0 none);
-        --text: oklch(100% 0 none);
-    }
-
-    @media (prefers-color-scheme: light) {
-        --bg: oklch(100% 0 none);
-        --text: oklch(23.503% 0 none);
-    }
+    --grey: light-dark(#666, #aaa);
+    --bg: light-dark(#fff, #222);
+    --text: light-dark(#222, #ccc);
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
     font-family: var(--font);
-    font-size: 1.25rem;
     width: 88dvw;
     max-width: 48rem;
     margin: auto;
@@ -74,7 +58,7 @@ a {
 
 .dim {
     color: var(--grey);
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 hr {
