@@ -7,6 +7,7 @@ const BLOCKLIST = [
   "www.nytimes.com",
   "x.com",
   "www.whio.com",
+  "ai-flux.io",
 ];
 
 interface Story {
