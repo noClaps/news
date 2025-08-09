@@ -8,6 +8,7 @@ const BLOCKLIST = [
   "x.com",
   "www.whio.com",
   "ai-flux.io",
+  "etechx.co.ke",
 ];
 
 interface Story {
