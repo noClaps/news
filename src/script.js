@@ -11,13 +11,19 @@ const BLOCKLIST = [
   "etechx.co.ke",
 ];
 
-interface Story {
-  type: "story";
-  url: string;
-  title: string;
-}
+/**
+ * @typedef {object} Story
+ * @property {"story"} type
+ * @property {string} url
+ * @property {string} title
+ */
 
-function escapeHTML(input: string) {
+/**
+ *
+ * @param {string} input
+ * @returns {string}
+ */
+function escapeHTML(input) {
   return input
     .replaceAll(`&`, `&amp;`)
     .replaceAll(`"`, `&quot;`)
@@ -26,23 +32,17 @@ function escapeHTML(input: string) {
     .replaceAll(`>`, `&gt;`);
 }
 
-const storyIds: number[] = await fetch(
+/** @type number[] */
+const storyIds = await fetch(
   "https://hacker-news.firebaseio.com/v0/newstories.json",
-)
-  .then((r) => r.json())
-  .catch((err) => {
-    throw new Error(err);
-  });
+).then((r) => r.json());
 
-const mainElement = document.querySelector("main")!;
+const mainElement = document.querySelector("main");
 for (const storyId of storyIds) {
-  const story: Story = await fetch(
+  /** @type Story */
+  const story = await fetch(
     `https://hacker-news.firebaseio.com/v0/item/${storyId}.json`,
-  )
-    .then((r) => r.json())
-    .catch((err) => {
-      throw new Error(err);
-    });
+  ).then((r) => r.json());
 
   if (
     story.type !== "story" ||
@@ -57,5 +57,3 @@ for (const storyId of storyIds) {
     `<a href="${story.url}" target="_blank">${escapeHTML(story.title)} <span class="dim">(${new URL(story.url).hostname})</span></a><hr>`,
   );
 }
-
-export {};

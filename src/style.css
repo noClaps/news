@@ -29,11 +29,6 @@ main {
 }
 
 a {
-    @starting-style {
-        opacity: 0;
-        visibility: hidden;
-    }
-
     color: var(--text);
     text-decoration: none;
     display: inline-flex;
@@ -50,6 +45,11 @@ a {
         color: var(--accent);
     }
 
+    @starting-style {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     @media (max-width: 800px) {
         flex-direction: column;
         align-items: start;
@@ -62,11 +62,6 @@ a {
 }
 
 hr {
-    @starting-style {
-        opacity: 0;
-        visibility: hidden;
-    }
-
     opacity: 1;
     visibility: visible;
     transition: all 1s;
@@ -76,4 +71,9 @@ hr {
     border-radius: 1rem;
     height: 0.1rem;
     margin: 0;
+
+    @starting-style {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
