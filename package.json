@@ -1,8 +1,8 @@
 {
   "name": "news",
   "scripts": {
-    "build": "bunx vite build src --outDir ../dist --emptyOutDir",
-    "dev": "bunx vite src"
+    "build": "bun x vite build src --outDir ../dist --emptyOutDir",
+    "dev": "bun x vite src"
   },
   "type": "module"
 }
