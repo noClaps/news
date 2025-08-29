@@ -1,0 +1,12 @@
+when:
+  - event: [push]
+    branch: [main]
+
+engine: nixery
+
+dependencies:
+  - nodejs
+
+steps:
+  - name: Deploy the site
+    command: npx wrangler deploy
