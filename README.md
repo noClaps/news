@@ -7,7 +7,7 @@ A minimal Hacker News client.
 1. Clone the repository.
 
    ```sh
-   git clone https://tangled.sh/@zerolimits.dev/news
+   git clone https://github.com/noClaps/news
    cd news/
    ```
 
