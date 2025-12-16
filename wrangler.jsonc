@@ -1,0 +1,8 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "news",
+  "compatibility_date": "2025-12-16",
+  "assets": {
+    "directory": "src",
+  },
+}

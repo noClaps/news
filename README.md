@@ -7,7 +7,7 @@ A minimal Hacker News client.
 1. Clone the repository.
 
    ```sh
-   git clone https://github.com/noClaps/news
+   git clone https://codeberg.org/noClaps/news
    cd news/
    ```
 
