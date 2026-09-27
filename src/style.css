@@ -1,18 +1,15 @@
 :root {
     color-scheme: light dark;
 
-    --font: system-ui;
-    --accent: #ff732e;
-
-    --grey: light-dark(#666, #aaa);
-    --bg: light-dark(#fff, #222);
-    --text: light-dark(#222, #ccc);
+    --accent: #ff6600;
+    --bg: light-dark(#fff, #1e1e1e);
+    --text: light-dark(#000, #fff);
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: var(--font);
+    font-family: ui-sans-serif, sans-serif;
     width: 88dvw;
     max-width: 48rem;
     margin: auto;
@@ -36,10 +33,7 @@ a {
     gap: 0.25rem;
     opacity: 1;
     visibility: visible;
-    transition:
-        opacity 1s,
-        visibility 1s,
-        color 0.25s;
+    transition: opacity 0.5s, color 0.25s;
 
     &:hover {
         color: var(--accent);
@@ -57,15 +51,15 @@ a {
 }
 
 .dim {
-    color: var(--grey);
+    opacity: 50%;
     font-size: 0.75rem;
 }
 
 hr {
     opacity: 1;
     visibility: visible;
-    transition: all 1s;
-    background-color: var(--grey);
+    transition: all 0.5s;
+    background-color: alpha(from var(--text) / 25%);
     width: 100%;
     border: none;
     border-radius: 1rem;

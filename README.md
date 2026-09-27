@@ -1,18 +1,14 @@
 # News
 
-A minimal Hacker News client.
+A minimal Hacker News client. It doesn't support logging in, viewing comments, or displaying anything that isn't categorised as a story with a link.
 
 ## Build instructions
 
-1. Clone the repository.
+Clone the repository.
 
-   ```sh
-   git clone https://codeberg.org/noClaps/news
-   cd news/
-   ```
+```sh
+git clone https://codeberg.org/noClaps/news
+cd news/
+```
 
-2. Start the development server.
-
-   ```sh
-   serve src/
-   ```
+The `src/` directory has all of the required files for the site to work.
