@@ -33,7 +33,9 @@ a {
     gap: 0.25rem;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s, color 0.25s;
+    transition:
+        opacity 0.5s,
+        color 0.25s;
 
     &:hover {
         color: var(--accent);
