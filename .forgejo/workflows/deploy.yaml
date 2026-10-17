@@ -5,8 +5,9 @@ jobs:
     runs-on: codeberg-tiny-lazy
     steps:
       - uses: https://code.forgejo.org/actions/checkout@v7
-      - uses: https://github.com/cloudflare/wrangler-action@v4
+      - uses: https://codeberg.org/git-pages/action@v2
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy src --project-name=news
+          site: https://news.zerolimits.dev/
+          server: codeberg.page
+          token: ${{ forge.token }}
+          source: src/
