@@ -7,7 +7,7 @@ A minimal Hacker News client. It doesn't support logging in, viewing comments, o
 Clone the repository.
 
 ```sh
-git clone https://codeberg.org/noClaps/news
+git clone https://github.com/noClaps/news
 cd news/
 ```
 
